@@ -31,14 +31,14 @@
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
-      }
+      } 
     </style>
     <!-- Custom styles for this template -->
     <link href="navbar-top-fixed.css" rel="stylesheet">
   </head>
   <body>
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-  <h5 class="my-0 mr-md-auto font-weight-normal"><img src="uk-lockup.png" width="100" fill="none" alt="University of Kentucky" href="https://www.uky.edu"/></h5>
+ <!-- <h5 class="my-0 mr-md-auto font-weight-normal"><img src="uk-lockup.png" width="100" fill="none" alt="University of Kentucky" href="https://www.uky.edu"/></h5> -->
   <nav class="my-2 my-md-0 mr-md-3">
     <a class="p-2 text-dark d-md-inline-block" href="index.html">Home</a>
     <a class="p-2 text-dark d-md-inline-block" href="research.html">Research</a>
@@ -57,89 +57,48 @@
         <h2><a id="project"></a>Projects</h2>
         <div><hr></div>
         <ul class="glyphicon glyphicon-list-alt">
-          <li><img src="feature_reg.png" class="float-right" style="height:120px;margin-right:40px">Improving Quality of Lossy Compression by Feature Regeneration
+
+          <li><img src="FAZ_framework.jpg" class="float-right" style="height:120px;margin-right:60px">FAZ: A flexible auto-tuned modular error-bounded compression framework for scientific data
             <ul class="glyphicon glyphicon-list-alt">
-                <li>Role: PI</li>
-                <li>Lead PI: Xin Liang</li>
-                <li>Sponsor: ANL</li>
-                <li>Amount: $79K</li>
-                <li>Period: 10/2022 - 07/2023</li>
-                <li>Project description: This project will focus on improving the compression quality of scientific lossy data compressors by exploring intelligent methods and parameter optimization strategies to regenerate feature and mitigate artifacts. The goal is to i) study new techniques to regenerate features and/or mitigate artifacts for scientific lossy data compressors; ii) integrate the methods to improve the compression quality of SZ using parameter optimizations; iii) evaluate and optimize the framework with ECP applications.</li>
+                <li>FAZ is a flexible and adaptive error-bounded lossy compression framework, which projects a fairly high capability of adapting to diverse datasets.</li>
+
+                <li>FAZ contains different compression modules which having same or similar functionalities, and dynamically selects and auto-tunes the best-fit modules in online compression to establish the optimized compression pipeline for each input data.</li>
+                <li>After careful selection of compression techniques and design of pipeline auto-tuning methods, the current version of FAZ is a hybrid-framework leveraing both prediction-based and transform-based compression techniques.</li>
+                <li>Experiments show that, compared to the second best compressor, FAZ can improve the compression ratio by up to 120%, 190%, and 75% when setting the same error bound, the same PSNR and the same SSIM, respectively.</li>
             </ul>
           </li>
-          <li><img src="nek_fp.png" class="float-right" style="height:120px;margin-right:40px">CRII: OAC: Enabling Quantities-of-Interest Error Control for Trust-Driven Lossy Compression
+
+          <li><img src="multi-data-distortion.jpg" class="float-right" style="height:120px;margin-right:60px">QoZ: Dynamic Quality Metric Oriented Error Bounded Lossy Compression for Scientific Datasets
             <ul class="glyphicon glyphicon-list-alt">
-                <li>Role: PI</li>
-                <li>Lead PI: Xin Liang</li>
-                <li>Sponsor: NSF</li>
-                <li>Amount: $175K</li>
-                <li>Period: 06/2022 - 05/2024</li>
-                <li>Scientific simulations and instruments are producing data at volumes and velocities that overwhelm network and storage systems. Although error-controlled lossy compressors have been employed to mitigate these data issues, many scientists still feel reluctant to adopt them because these compressors provide no guarantee on the accuracy of downstream analysis results derived from raw data. This project aims to fill this gap by developing a trust-driven lossy data compression infrastructure capable of strictly controlling the errors in downstream analysis theoretically and practically to facilitate the use of data reduction in scientific applications. Success of this project will promote the progress of science in multiple disciplines via effective data reduction, and contribute to resolving important societal problems including electric generation, weather forecasting, material design, and transportation. Moreover, this project will contribute to the growth and development of future generations of scientists and engineers through educational and engagement activities, including development of new curriculum and recruitment of K-12 students.</li>
+                <li>QoZ is a prediction-based error-bounded data compressor, which is also the first .</li>
+                <li>QoZ is the first dynamic quality-metric-oriented error-bounded lossy compressor, which can online optimize its compression according to user-specified preferred quality metrics (e.g. PSNR, SSIM, Autocorrelation).</li>
+
+                <li>Based on SZ3 interpolation predictor, QoZ develops and leverages an advanced interpolation-based predictor with high flexibility for auto-tuning, and an effective quality-metric driven auto-tuning algorithm.</li>
+                <li>Compared with the second best lossy compressor, QoZ can achieve up to 70\% compression ratio improvement under the same error bound, up to 150\% compression ratio improvement under the same PSNR, or up to 270\% compression ratio improvement under the same SSIM.</li>
+                
             </ul>
           </li>
-          <li><img src="drd.png" class="float-right" style="height:120px;margin-right:40px">ESAMR: Enabling Scalable Analytics using Multi-precision Refactoring
+
+          <li><img src="aesz.jpg" class="float-right" style="height:120px;margin-right:60px">AE-SZ: Exploring Autoencoder-based Error-bounded Compression for Scientific Data
             <ul class="glyphicon glyphicon-list-alt">
-                <li>Role: PI</li>
-                <li>Lead PI: Xin Liang</li>
-                <li>Sponsor: ORNL DRD</li>
-                <li>Amount: $320K/year</li>
-                <li>Period: 10/2020 - 09/2022</li>
-                <li>Project description: The overarching goal of this project is to create a framework to enable efficient data streaming from edge devices, on-demand data retrieval from storage systems, and progressive, scalable data analytics on edge and high-performance computing (HPC) platforms. To achieve this goal, our multiprecision refactoring framework will refactor scientific data in a progressive fashion based on importance, and will be optimized on ORNL’s accelerated nodes. The framework will offer on-demand accuracy to minimize data movement, and time spent in analysis algorithms on edge and HPC resources. Although this is a general framework, we will validate its effectiveness on CNMS data generated from the scanning transmission electron microscopy and DCA++ simulation data generated on Summit. Upon success, it can be utilized at other ORNL facilities such as SNS, HFIR, and OLCF. The progressive data representation defined in this project (i.e., the refactored data) is complementary to other important ORNL initiatives such as the Federated Instrument Initiative and the Scalable Data Infrastructure for Science Initiative and can be integrated in edge systems and distributed storage infrastructures to allow for efficient and scalable data collection, storage, and sharing.</li>
+                <li>AE-SZ is a deep-learning (autoencoder) based scientific data lossy compressor, which is also a pioneering practice in its time of leveraging deep learning techniques in scientific data compression.</li>
+                <li>Like traditional lossy compressors such as SZ, AE-SZ has full support of error-bounding requirements.</li>
+
+                <li>SWAE (Sliced-Wasserstein Autoencoder) and GDN (Generalized Divisive Normalization) is utilized in AE-SZ for generating effective compressed representation of the original input data. The compressed latent vectors are further quantized to maximally improve the compression ratio.</li>
+
+                <li>Based on SZ3 interpolation predictor, QoZ develops and leverages an advanced interpolation-based predictor with high flexibility for auto-tuning, and an effective quality-metric driven auto-tuning algorithm.</li>
+                <li>AE-SZ can obtain a much better compression quality (100%-800% improvement in compression ratio with the same data distortion) compared with SZ2.1 and ZFP in cases with high compression ratios.</li>
+                
             </ul>
           </li>
-          <li><img src="sirius.png" class="float-right" style="height:80px;margin-right:40px"><a href="https://csmd.ornl.gov/project/sirius-2-science-driven-data-management-multitier-storage-20">Sirius-2: Science-driven Data Management for Multitier Storage 2.0</a>
-            <ul class="glyphicon glyphicon-list-alt">
-                <li>Role: Senior Personnel</li>
-                <li>Lead PI: Scott Klasky (ORNL)</li>
-                <li>Sponsor: DOE ASCR</li>
-                <li>Amount: $500K/year</li>
-                <li>Period: 10/2020 - 09/2025</li>
-                <li>Project description: The Sirius 2 project will create the capability to enable progressive analysis. To accomplish this, we will build upon our approach that created the MultiGrid Adaptive Reduction of Data (MGARD) framework, which was a novel approach to create a hierarchy of grids to represent the original data, and then compress the grids in the hierarchy. In this project, we will map the refactored data across a multitier storage system according to the information content. This mapping will allow for both in situ and post-processing analysis methods to progressively retrieve with increasing accuracy.</li>
-            </ul>
-          </li>
-          <li><img src="rapids.jpg" class="float-right" style="height:60px;margin-right:20px"><a href="https://rapids.lbl.gov">RAPIDS-2: A SciDAC Institute for Computer Science, Data, and Artifical Intelligence</a>
-            <ul class="glyphicon glyphicon-list-alt">
-                <li>Role: Senior Personnel</li>
-                <li>Lead PI: Robert Ross (ANL)</li>
-                <li>Sponsor: DOE ASCR</li>
-                <li>Amount: $5.75M/year</li>
-                <li>Period: 10/2020 - 09/2025</li>
-                <li>Project description: The Department of Energy (DOE) has led the world in enabling large-scale high-performance computing as an indispensable tool for scientific discovery in a broad range of disciplines. Our newest generation of systems is not simply larger than past systems – it brings distinct and novel challenges. These challenges arise from the deepening of the memory hierarchy and inclusion of fast, nonvolatile storage within the HPC system; the widening ratio of peak FLOPS to I/O bandwidth; and the increasing ubiquity of computation accelerators. Moreover, the breadth of science performed on DOE advanced computing resources is growing and new motifs of investigation are emerging, including those involving experimental and observational data and artificial intelligence (AI). To address these challenges, we propose the RAPIDS2 SciDAC Institute for Computer Science, Data, and Artificial Intelligence. </li>
-            </ul>
-          </li>
-          <li><img src="codar.png" class="float-right" style="height:120px;margin-right:40px"><a href="https://www.researchgate.net/project/Co-design-Center-for-Online-Data-Analysis-and-Reduction">CODAR: Co-design Center for Online Data Analysis and Redcution at the Exascale</a>
-            <ul class="glyphicon glyphicon-list-alt">
-                <li>Role: Researcher</li>
-                <li>Lead PI: Ian Foster (ANL)</li>
-                <li>Sponsor: DOE ECP</li>
-                <li>Amount: $4M/year</li>
-                <li>Period: 10/2016 - 09/2023</li>
-                <li>Project description: By 2024, computers are expected to compute at 10<sup>18</sup> operations per second but write to disk only at 10<sup>12</sup> bytes/sec: a compute-to-output ratio 200 times worse than on the first petascale systems. In this new world, applications must increasingly perform online data analysis and reduction tasks that introduce algorithmic, implementation, and programming model challenges that are unfamiliar to many scientists and that have major implications for the design of various elements of exascale systems. The goal of the Center for Online Data Analysis and Reduction at the Exascale (CODAR) is to produce infrastructure for online data analysis and reduction; provide valuable abstractions for implementing and customizing data analysis and reduction methods; import, integrate, and develop essential libraries implemented using these abstractions; incorporate the libraries into scientific applications and quantify accuracy and performance; release software artifacts; construct application-oriented case studies; document success stories and the process applied to obtain them; and report on codesign trade-off investigations.</li>
-            </ul>
-          </li>
-          <li><img src="adios.png" class="float-right" style="height:80px;margin-right:20px"><a href="https://csmd.ornl.gov/software/adios2">ADIOS: Providing A Framework For Scientific Data On Exascale Systems</a>
-            <ul class="glyphicon glyphicon-list-alt">
-                <li>Role: Researcher</li>
-                <li>Lead PI: Scott Klasky (ORNL)</li>
-                <li>Sponsor: DOE ECP</li>
-                <li>Amount: $1.5M/year</li>
-                <li>Period: 10/2016 - 09/2023</li>
-                <li>Project description: Exascale architectures will have complex, heterogeneous memory hierarchies, ranging from node-level caches and main memory all the way to persistent storage via the file system, that applications need to effectively achieve their science goals. At the same time, exascale applications are becoming more complex in their data flows, from multiscale and multiphysics simulations that need to exchange data between separate codes to simulations that invoke data analysis and visualization services to extract information and render it to storing simulation output to the file system for later analysis. The ADIOS project delivers a highly optimized coupling infrastructure that enables efficient synchronous and asynchronous data exchanges to move data between multiple codes running concurrently and to the different layers of the storage system.</li>
-            </ul>
-          </li>
-          <li><img src="sz.jpg" class="float-right" style="height:120px;margin-right:60px"><a href="https://szcompressor.org">SZ: Fast, Effective, Parallel Error-bounded Exascale Lossy Compression For Scientific Data</a>
-            <ul class="glyphicon glyphicon-list-alt">
-                <li>Role: Research Intern</li>
-                <li>Lead PI: Franck Cappello (ANL)</li>
-                <li>Sponsor: DOE ECP</li>
-                <li>Period: 10/2016 - 09/2023</li>
-                <li>Abstract: Long-running large-scale simulations and high-resolution, high-frequency instrument detectors are generating extremely large volumes of data at a high rate. While reliable scientific computing is routinely achieved at small scale, it becomes remarkably difficult at exascale due to both an increased number of disruptions as the machines become larger and more complex from, for example, component failures and the big data challenge. The VeloC/SZ project addresses these challenges by focusing on ensuring high reliability for long-running exascale simulations and reducing the data while keeping important scientific outcomes intact.</li>
-            </ul>
-          </li>
+        
+
+
         </ul>
       </div>
       <div><hr></div>
 
+<!--
       <div class="starter-template">
         <h2><a id="publication"></a>Publications (with my students underlined)</h2>
         <div><hr></div>        
@@ -782,6 +741,8 @@
         </div>
       </div>    
 
+  </nav>
+  -->
   <!-- </div> -->    
 </main>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
