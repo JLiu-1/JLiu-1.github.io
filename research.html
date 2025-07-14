@@ -60,7 +60,31 @@
         <ul class="glyphicon glyphicon-list-alt">
 
 
-          <li><img src="cuszI.jpg" class="float-right" style="height:120px;margin-right:60px"><b>cuSZ-I: High-Fidelity Error-Bounded Lossy Compression for Scientific Data on GPUs</b> <I><a href="https://arxiv.org/pdf/2312.05492v1.pdf">[Paper Link]</a></I> <I><a href="https://arxiv.org/pdf/2312.05492">[Code Link]</a></I>
+          <li><img src="research_figs/cuszHi.jpg" class="float-right" style="height:120px;margin-right:60px"><b>cuSZ-Hi: Boosting Scientific Error-Bounded Lossy Compression through Optimized Synergistic Lossy-Lossless Orchestration</b> <!--<I><a href="https://arxiv.org/pdf/2312.05492">[Paper Link]</a></I> --> <I><a href="https://github.com/shixun404/cuSZ-Hi">[Code Link]</a></I> 
+            <ul class="glyphicon glyphicon-list-alt">
+                <li>cuSZ-Hi is a fully open-source high-ratio scientific error-bounded lossy compressor on GPUs.</li>
+                <li>Based on cuSZ-I, we further optimized the high-throughput interpolation-based data prediction on GPU platforms, proposing a new scientific data prediction module with multiple interpolation schemes and auto-tuned configurations</li>
+                <li>After an in-depth investigation of existing numerical lossless encoders, we craft and incorporate the best-fit lossless encoding pipelines for maximizing the compression ratio on GPUs.</li>
+                <li>cuSZ-Hi exhibits outperforming compression ratio and quality compared to all existing state-of-the-arts. It can achieve up to 249% compression ratio improvement over existing scientific lossy compressors under the same error bound and up to 215% compression ratio improvement under the same decompression data PSNR.</li>
+                
+            </ul>
+          </li>
+          <br>
+
+          <li><img src="research_figs/qpet.jpg" class="float-right" style="height:120px;margin-right:60px"><b>QPET: A Versatile and Portable Quantity-of-Interest-Preservation Framework for Error-Bounded Lossy Compression</b> <I><a href="https://arxiv.org/pdf/2412.02799">[Paper Link]</a></I>  <I><a href="https://github.com/JLiu-1/QPET-Artifact">[Code Link]</a></I>
+            <ul class="glyphicon glyphicon-list-alt">
+                <li>QPET is a QoI-oriented Point-wise Error-bound auto-tuning framework to enable the preservation of diverse QoIs in scientific applications.</li>
+                <li>QPET leverages numerical and probabilistic methods to derive sufficient error bounds on each data point, which easily adapts to most differentiable QoIs.</li>
+                <li>QPET effectively determines the best-fit point-wise error bound for each data value in the QoI-preserving compression. It also jointly optimizes the error-bound storage overhead and the reduction in raw data by a dynamic global error bound selection.</li>
+                <li>QPET yields significant compression ratio (CR) and throughput gains in QoI-preserving compression tasks. Under the same QoI error threshold, QPET-integrated compressors achieve up to 1000% CR improvements over the general-purpose compressors and up to 133% CR improvements over existing QoI-preserving lossy compressors. It also achieves 2x to 10x compression speedups over existing QoI-preserving scientific lossy compression solutions.</li>
+                
+            </ul>
+          </li>
+          <br>
+
+
+
+          <li><img src="research_figs/cuszI.jpg" class="float-right" style="height:120px;margin-right:60px"><b>cuSZ-I: High-Fidelity Error-Bounded Lossy Compression for Scientific Data on GPUs</b> <I><a href="https://arxiv.org/pdf/2312.05492">[Paper Link]</a></I>  <!--<I><a href="https://arxiv.org/pdf/2312.05492">[Code Link]</a></I> -->
             <ul class="glyphicon glyphicon-list-alt">
                 <li>We develop a GPU-customized interpolation-based data predictor G-interp with highly parallelized efficient interpolation, which can present excellent data prediction accuracy, thus leading to a high overall compression ratio.</li>
                 <li>We design and implement a highly lightweight interpolation auto-tuning kernel for GPU interpolation to optimize both performance and compression quality of cuSZ-I.</li>
@@ -71,7 +95,7 @@
           </li>
           <br>
 
-          <li><img src="srnn-sz.jpg" class="float-right" style="height:120px;margin-right:60px"><b>SRN-SZ: Scientific Error-bounded Lossy Compression with Super-resolution Neural Networks</b> <I><a href="https://arxiv.org/pdf/2309.04037.pdf">[Paper Link]</a></I> 
+          <li><img src="research_figs/srnn-sz.jpg" class="float-right" style="height:120px;margin-right:60px"><b>SRN-SZ: Scientific Error-bounded Lossy Compression with Super-resolution Neural Networks</b> <I><a href="https://arxiv.org/pdf/2309.04037.pdf">[Paper Link]</a></I> 
             <ul class="glyphicon glyphicon-list-alt">
                 <li>We propose a scientific error-bounded lossy compressor SRN-SZ, in which the compression is performed with a hybrid of super-resolution networks and interpolations.</li>
                 <li>Leveraging the Hybrid Attention Transformer (HAT) network, we designed a specialized training pipeline with several adaptive techniques to optimize the super-resolution quality of scientific data.</li>
@@ -81,7 +105,7 @@
           </li>
           <br>
 
-          <li><img src="QoZ 2.0 framework horizontal.jpg" class="float-right" style="height:120px;margin-right:60px"><b>QoZ 2.0 (HPEZ): High-performance Effective Scientific Error-bounded Lossy Compression with Auto-tuned Multi-component Interpolation</b> <I><a href="https://arxiv.org/pdf/2311.12133.pdf">[Paper Link]</a></I> <I><a href="https://github.com/JLiu-1/HPEZ">[Code Link]</a></I>
+          <li><img src="research_figs/QoZ 2.0 framework horizontal.jpg" class="float-right" style="height:120px;margin-right:60px"><b>QoZ 2.0 (HPEZ): High-performance Effective Scientific Error-bounded Lossy Compression with Auto-tuned Multi-component Interpolation</b> <I><a href="https://arxiv.org/pdf/2311.12133.pdf">[Paper Link]</a></I> <I><a href="https://github.com/JLiu-1/HPEZ">[Code Link]</a></I>
             <ul class="glyphicon glyphicon-list-alt">
                 <li>Founded on theoretical analysis and algorithmic optimizations, QoZ 2.0 substantially upgrades the most critical step in the quality-oriented compression -- interpolation prediction, leading to an immensely improved data prediction accuracy.</li>
                 <li>QoZ 2.0 develops a series of optimization strategies including block-wise interpolation tuning, dynamic dimension freezing, and Lorenzo tuning, which can substantially improve the adaptability of the auto-tuning for the compression across a broad spectrum of inputs.</li>
@@ -91,7 +115,7 @@
           </li>
           <br>
 
-          <li><img src="FAZ_framework.jpg" class="float-right" style="height:120px;margin-right:60px"><b>FAZ: A flexible auto-tuned modular error-bounded compression framework for scientific data</b> <I><a href="https://dl.acm.org/doi/abs/10.1145/3577193.3593721">[Paper Link]</a></I> 
+          <li><img src="research_figs/FAZ_framework.jpg" class="float-right" style="height:120px;margin-right:60px"><b>FAZ: A flexible auto-tuned modular error-bounded compression framework for scientific data</b> <I><a href="https://dl.acm.org/doi/abs/10.1145/3577193.3593721">[Paper Link]</a></I> 
             <ul class="glyphicon glyphicon-list-alt"> 
                 <li>FAZ is a flexible and adaptive error-bounded lossy compression framework, which projects a fairly high capability of adapting to diverse datasets.</li>
 
@@ -102,7 +126,7 @@
           </li>
           <br>
 
-          <li><img src="multi-data-distortion.jpg" class="float-right" style="height:120px;margin-right:60px"><b>QoZ: Dynamic Quality Metric Oriented Error Bounded Lossy Compression for Scientific Datasets</b> <I><a href="https://arxiv.org/pdf/2310.14133.pdf">[Paper Link]</a></I> <I><a href="https://github.com/szcompressor/QoZ">[Code Link]</a></I>
+          <li><img src="research_figs/multi-data-distortion.jpg" class="float-right" style="height:120px;margin-right:60px"><b>QoZ: Dynamic Quality Metric Oriented Error Bounded Lossy Compression for Scientific Datasets</b> <I><a href="https://arxiv.org/pdf/2310.14133.pdf">[Paper Link]</a></I> <I><a href="https://github.com/szcompressor/QoZ">[Code Link]</a></I>
             <ul class="glyphicon glyphicon-list-alt">
                 <li>QoZ is the first dynamic quality-metric-oriented scientific error-bounded lossy compressor, which can online optimize its compression according to user-specified preferred quality metrics (e.g. PSNR, SSIM, Autocorrelation).</li>
                 <li>Based on SZ3 interpolation predictor, QoZ develops and leverages an advanced interpolation-based predictor with high flexibility for auto-tuning, and an effective quality-metric driven auto-tuning algorithm.</li>
@@ -112,7 +136,7 @@
           </li>
           <br>
 
-          <li><img src="aesz.jpg" class="float-right" style="height:120px;margin-right:60px"><b>AE-SZ: Exploring Autoencoder-based Error-bounded Compression for Scientific Data</b>
+          <li><img src="research_figs/aesz.jpg" class="float-right" style="height:120px;margin-right:60px"><b>AE-SZ: Exploring Autoencoder-based Error-bounded Compression for Scientific Data</b>
             <I><a href="https://arxiv.org/pdf/2105.11730.pdf">[Paper Link]</a></I> 
             <ul class="glyphicon glyphicon-list-alt">
                 <li>AE-SZ is a deep-learning (autoencoder) based scientific data lossy compressor, which is also a pioneering practice in its time of leveraging deep learning techniques in scientific data compression.</li>
